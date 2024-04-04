@@ -27,7 +27,7 @@ const sansSerifButton = fontsSwitcherContainer.querySelector(".font-button-sans-
 fontsSwitcherContainer.addEventListener("click", (e) => {
     if(e.target.className === "font-button-serif"){
         document.body.classList.add("serif");
-        switchButtons(sansSerifButton, serifButton)
+        switchButtons(serifButton, sansSerifButton)
     } else {
         document.body.classList.remove("serif");
         switchButtons(sansSerifButton, serifButton);
@@ -57,5 +57,18 @@ cardsSwitchButtonsContainer.addEventListener("click", (e) => {
         cardsList.classList.remove("list");
         switchButtons(buttonGridView, buttonListView);
     }
+})
+
+//gallery clicks
+
+const mainPhoto = document.querySelector(".active-photo");
+const previewList = document.querySelector(".preview-list");
+
+previewList.addEventListener("click", (e) => {
+    e.preventDefault();
+    const activePreview = document.querySelector(".active-item");
+    activePreview.classList.remove("active-item");
+    e.target.classList.add("active-item");
+    mainPhoto.src = e.target.href;
 })
 
