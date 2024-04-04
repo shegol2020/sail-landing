@@ -66,7 +66,7 @@ const previewList = document.querySelector(".preview-list");
 
 previewList.addEventListener("click", (e) => {
     e.preventDefault();
-    const activePreview = document.querySelector(".active-item");
+    const activePreview = previewList.querySelector(".active-item");
     activePreview.classList.remove("active-item");
     e.target.classList.add("active-item");
     mainPhoto.src = e.target.href;
