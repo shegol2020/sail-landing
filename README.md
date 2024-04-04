@@ -1,4 +1,4 @@
-[Htmlacademy](https://htmlacademy.ru/) landing project with JS implementaion
+[HTMLAcademy](https://htmlacademy.ru/) landing project with JS implementaion
 
 * Light and dark mode toggles
 * Serif and sans-serif font options
