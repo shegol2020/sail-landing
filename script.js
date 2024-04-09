@@ -72,3 +72,16 @@ previewList.addEventListener("click", (e) => {
     mainPhoto.src = e.target.href;
 })
 
+//up button
+const upBtn = document.querySelector(".up-button");
+window.addEventListener("scroll", () => {
+    if(window.scrollY>1000){
+        upBtn.removeAttribute("hidden");
+    }
+})
+
+upBtn.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+    upBtn.setAttribute("hidden", "");
+})
+
